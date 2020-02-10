@@ -1,0 +1,16 @@
+<h1>Result</h1>
+
+<% if @include %>
+  <% if @english %>
+    <%= "Congratulations! #{@guess.capitalize} is a valid English word" %>
+  <% else %>
+    <%= "Sorry but #{@guess} does not seem to be a valid English word" %>
+  <% end %>
+<% else %>
+  <%= "Sorry but #{@guess} can't be build out of #{@letters}" %>
+<% end %>
+
+<p>Your score : </p>
+
+<br>
+<%= link_to "Play again", new_path %>
